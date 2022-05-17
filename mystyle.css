@@ -381,7 +381,13 @@ footer {
    min-width: 100%;
    max-width: 100%;
    height: auto;
+   transition: all 0.5s;
 }
+
+#media img:hover {
+   transform: translateY(-5px);
+}
+
 
 @media only screen and (min-width: 480px) {
    #media {
