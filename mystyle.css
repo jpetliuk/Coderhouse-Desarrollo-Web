@@ -11,7 +11,12 @@ h1,
 h2,
 h3,
 h4,
-h5,
+h5 {
+   margin: 0;
+   font-family: 'lato', sans-serif;
+   font-weight: bold;
+}
+
 p {
    margin: 0;
    font-family: 'lato', sans-serif;
@@ -141,38 +146,17 @@ main {
 /* fin de main */
 
 /* menu de navegacion*/
-header {
-   grid-area: navegacion;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   padding: 20px 2%;
-   font-family: 'lato', sans-serif;
-   font-weight: bold;
+
+.nav-link {
    font-size: 1.5rem;
+   font-weight: bold;
+   color: black !important;
+   font-family: 'lato', sans-serif;
+   padding: 0 10px !important;
 }
 
-.logo {
-   cursor: pointer;
-}
-
-.nav__links {
-   list-style: none;
-}
-
-.nav__links li {
-   display: inline-block;
-   padding: 0px 10px;
-}
-
-.nav__links li a {
-   transition: all 0.3s ease 0s;
-   text-decoration: none;
-   color: black;
-}
-
-.nav__links li a:hover {
-   color: #e1c04f;
+.nav-link:hover {
+   color: #e1c04f !important;
 }
 
 /* fin de menu de navegacion*/
@@ -536,7 +520,44 @@ footer {
 
 /* ------------------NOSOTROS------------------ */
 
+#nosotros-contenedor {
+   margin-top: 60px;
+   margin-bottom: 60px;
+}
 
 @media only screen and (min-width: 1200px) {}
 
 /* ------------------FIN DE NOSOTROS------------------ */
+
+/* ------------------CONTACTO------------------ */
+
+#contacto h1 {
+   font-size: 3rem;
+}
+
+#contacto form {
+   margin-bottom: 40px;
+}
+
+#contacto form div label {
+   font-size: 2rem;
+}
+
+#contacto form div input {
+   font-size: 1.5rem;
+}
+
+#contacto form div textarea {
+   font-size: 1.5rem;
+}
+
+#contacto form div button {
+   font-size: 1.4rem;
+   margin-bottom: 25px;
+   font-weight: bold;
+   color: black;
+   background-color: #e1c04f;
+   border: 2px solid #e1c04f;
+}
+
+/* ------------------FIN DE CONTACTO------------------ */
