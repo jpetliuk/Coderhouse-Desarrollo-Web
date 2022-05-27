@@ -1,0 +1,124 @@
+/* fuentes importadas de google fonts (Bebas Neue, Lato y Raleway) */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato&family=Raleway&display=swap');
+
+html {
+   font-size: 62.5%;
+   /* 10px = 1rem */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+   margin: 0;
+   font-family: 'lato', sans-serif;
+   font-weight: bold;
+}
+
+p {
+   margin: 0;
+   font-family: 'lato', sans-serif;
+}
+
+body {
+   margin: 0%;
+   /* tamaño de font por defecto */
+   font-size: 1.7rem;
+   font-weight: normal;
+}
+
+/* contenedor */
+#contenedor {
+   display: grid;
+   grid-template-areas:
+      "navegacion"
+      "principal"
+      "pie"
+   ;
+   grid-template-columns: 100%;
+   width: 100%;
+}
+
+/* fin de contenedor*/
+
+/* main */
+main {
+   grid-area: principal;
+}
+
+/* fin de main */
+
+/* menu de navegacion*/
+
+.nav-link {
+   font-size: 1.5rem;
+   font-weight: bold;
+   color: black !important;
+   font-family: 'lato', sans-serif;
+   padding: 0 10px !important;
+
+   &:hover {
+      color: #e1c04f !important;
+   }
+}
+
+.navbar-toggler-icon {
+   font-size: 1.3em;
+}
+
+/* fin de menu de navegacion*/
+
+/* footer */
+footer {
+   grid-area: pie;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 20px 2%;
+   font-family: 'lato', sans-serif;
+   font-weight: bold;
+   font-size: 1.5rem;
+   background-color: black;
+}
+
+@media only screen and (max-width: 767px) {
+   footer {
+      display: block;
+      text-align: center;
+   }
+}
+
+.footer__redes {
+   margin-top: 30px;
+}
+
+.footer {
+   min-height: 50px;
+}
+
+.footer__redes {
+   text-align: center;
+   color: white;
+}
+
+.footer__nav__links {
+   list-style: none;
+
+   li {
+      display: inline-block;
+      padding: 0px 10px;
+   }
+
+   li a {
+      transition: all 0.3s ease 0s;
+      text-decoration: none;
+      color: white;
+
+      &:hover {
+         color: #e1c04f;
+      }
+   }
+}
+
+/* fin de footer */

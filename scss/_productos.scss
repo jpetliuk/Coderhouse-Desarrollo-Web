@@ -1,0 +1,134 @@
+.hr__socalo {
+   box-shadow: 0 1px 3px #870000b6;
+   border: 0;
+   background-color: black;
+   height: 1px;
+}
+
+/* COMBOS LAYOUT*/
+
+.go-back {
+   text-decoration: none;
+   color: black;
+   font-family: 'lato', sans-serif;
+   font-weight: bold;
+   font-size: 1.8rem;
+   margin-left: 10px;
+
+   &:hover {
+      text-decoration: underline;
+      color: #e1c04f;
+   }
+}
+
+#productos {
+   width: 95%;
+   max-width: 95%;
+   display: grid;
+   grid-template-columns: 600px 600px;
+   align-items: top;
+   justify-content: center;
+   margin: 75px 0 150px 0;
+
+   div {
+      width: 600px;
+      overflow: visible;
+      margin: 20px;
+      text-align: center;
+
+      img {
+         max-width: 80%;
+         max-height: 80%;
+         transition: all 1s cubic-bezier(.23, 1, 0.32, 1);
+         margin-top: 20px;
+
+         &:hover {
+            transform: scale(1.1, 1.1);
+         }
+      }
+   }
+
+   h2 {
+      text-align: start;
+      font-size: 3.5rem;
+   }
+
+   p {
+      text-align: start;
+      margin-bottom: 40px;
+      font-family: 'Raleway', sans-serif;
+   }
+}
+
+@media only screen and (max-width: 1200px) {
+   #productos {
+      width: 100%;
+      max-width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      margin: 10px 0 50px 0;
+
+      h2 {
+         text-align: center;
+      }
+
+      hr {
+         margin: 0 15% 10px 15%;
+      }
+
+      p {
+         text-align: center;
+      }
+
+      div img {
+         max-width: 100%;
+         max-height: 100%;
+
+         &:hover {
+            transform: scale(1, 1);
+         }
+      }
+   }
+}
+
+/* ------------------- */
+
+#productosInformacion {
+   width: 100%;
+   max-width: 100%;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: left;
+
+   .productosInformacion__arreglo {
+      color: red;
+   }
+
+   div {
+      margin: 0px;
+      width: 450px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      text-align: center;
+   }
+
+   div h4 {
+      margin: 20px 0 10px 0;
+   }
+}
+
+.hr__productosInformacion {
+   background-color: rgba(95, 95, 95, 0.4);
+   height: 1px;
+   border: 0;
+}
+
+@media only screen and (max-width: 1200px) {
+   #productosInformacion {
+      justify-content: center;
+   }
+}
+
+/* FIN DE COMBOS LAYOUT */
