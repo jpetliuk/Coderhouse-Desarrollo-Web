@@ -39,12 +39,30 @@ main {
 /* fin de main */
 /* ------------------HEADER------------------ */
 /* menu de navegacion*/
-.navbar-light .navbar-toggler-icon {
-  font-size: 15px;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0,0,0, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); }
+@media only screen and (max-width: 1199px) {
+  .container {
+    min-width: 100%;
+    padding: 0; }
+    .container nav a {
+      padding: 5px 0 5px 3%; }
+    .container nav button {
+      padding-right: 5%; } }
 
-.navbar-light .navbar-toggler {
-  border: 2px solid rgba(0, 0, 0, 0.5); }
+@media only screen and (min-width: 1200px) {
+  .container {
+    min-width: 100%;
+    padding: 5px 6% 5px 8%; } }
+
+.navbar-light .navbar-toggler-icon {
+  font-size: 22px;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0,0,0, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='3' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); }
+  .navbar-light .navbar-toggler-icon:hover {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(225,192,79, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='3' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); }
+
+.navbar-toggler {
+  border: none; }
+  .navbar-toggler:focus {
+    box-shadow: none; }
 
 .nav-link {
   font-size: 1.5rem;
@@ -55,9 +73,8 @@ main {
   .nav-link:hover {
     color: #e1c04f !important; }
 
-.navbar-toggler {
-  border-color: rgba(0, 0, 0, 0.6) !important;
-  border-width: 2px; }
+.hr_header {
+  margin: 0; }
 
 /* fin de menu de navegacion*/
 /* ------------------FIN DE HEADER------------------ */
@@ -67,7 +84,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 2%;
+  padding-left: 2%;
   font-family: 'lato', sans-serif;
   font-weight: bold;
   font-size: 1.5rem;
@@ -82,9 +99,12 @@ footer {
   footer .footer__redes {
     text-align: center;
     color: white;
-    margin-top: 30px; }
+    margin-top: 25px; }
+    footer .footer__redes h2 {
+      margin: auto; }
   footer .footer__nav__links {
-    list-style: none; }
+    list-style: none;
+    margin: auto; }
     footer .footer__nav__links li {
       display: inline-flex;
       justify-content: center;
@@ -98,7 +118,8 @@ footer {
   footer hr {
     color: white;
     text-align: center;
-    margin: 10px 20% 10px 20%; }
+    margin: 10px auto 0 auto;
+    width: 270px; }
   footer .fa {
     padding: 10px;
     margin: 20px;
