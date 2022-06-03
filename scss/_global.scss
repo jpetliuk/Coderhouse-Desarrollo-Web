@@ -1,12 +1,16 @@
-/* fuentes importadas de google fonts (Bebas Neue, Lato y Raleway) */
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato&family=Raleway&display=swap');
 
 html {
    font-size: 62.5%;
-   /* 10px = 1rem */
 }
 
-h1,
+h1 {
+   font-size: 6.2rem;
+   margin: 0;
+   font-weight: bold;
+   font-family: 'Bebas Neue', cursive;
+}
+
 h2,
 h3,
 h4,
@@ -18,17 +22,16 @@ h5 {
 
 p {
    margin: 0;
-   font-family: 'lato', sans-serif;
+   font-family: 'Raleway', sans-serif;
+   font-size: 1.7rem;
 }
 
 body {
-   margin: 0%;
-   /* tamaño de font por defecto */
+   margin: 0;
    font-size: 1.7rem;
    font-weight: normal;
 }
 
-/* contenedor */
 #contenedor {
    display: grid;
    grid-template-areas:
@@ -40,17 +43,94 @@ body {
    width: 100%;
 }
 
-/* fin de contenedor*/
-
-/* main */
 main {
    grid-area: principal;
 }
 
-/* fin de main */
+.centrado {
+   margin: 0;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -40%);
+}
+
+@media only screen and (max-width: 767px) {
+   .spacing {
+      margin-top: 20px;
+   }
+}
+
+/*map & mixin*/
+
+$redes: (
+   twitter: #55ACEE,
+   facebook: #3B5998,
+   vimeo: #c63434
+);
+
+@mixin font-titulo($weight, $spacing, $color, $margin) {
+   font-weight: $weight;
+   letter-spacing: $spacing;
+   color: $color;
+   margin-bottom: $margin;
+}
+
+/*fin map*/
+
+.titulo-bg {
+   background-position: center;
+   background-size: cover;
+   height: 80vh;
+   width: 100%;
+   text-align: center;
+}
+
+@media only screen and (max-width: 767px) {
+   .titulo-bg {
+      height: 90vh;
+   }
+}
+
+.inicio-titulo {
+   @include font-titulo(100, 0.1rem, azure, 25px);
+}
+
+.inicio-titulo-color {
+   color: #e1c04f;
+}
+
+.inicio-subtitulo {
+   color: whitesmoke;
+   font-weight: normal;
+   text-align: center;
+   margin-bottom: 100px;
+}
 
 /* ------------------HEADER------------------ */
-/* menu de navegacion*/
+
+.nav-link {
+   font-size: 1.5rem;
+   font-weight: bold;
+   color: black !important;
+   font-family: 'lato', sans-serif;
+   padding: 0 10px !important;
+
+   &:hover {
+      color: #e1c04f !important;
+   }
+}
+
+.hr-header {
+   margin: 0;
+   visibility: hidden;
+}
+
+@media only screen and (max-width: 1199px) {
+   .hr-header {
+      visibility: visible;
+   }
+}
 
 @media only screen and (max-width: 1199px) {
    .container {
@@ -93,25 +173,7 @@ main {
    }
 }
 
-.nav-link {
-   font-size: 1.5rem;
-   font-weight: bold;
-   color: black !important;
-   font-family: 'lato', sans-serif;
-   padding: 0 10px !important;
-
-   &:hover {
-      color: #e1c04f !important;
-   }
-}
-
-.hr_header {
-   margin: 0;
-}
-
-/* fin de menu de navegacion*/
 /* ------------------FIN DE HEADER------------------ */
-
 /* ------------------FOOTER------------------ */
 footer {
    grid-area: pie;
@@ -128,7 +190,7 @@ footer {
       min-height: 50px;
    }
 
-   .footer__redes {
+   .footer-redes {
       text-align: center;
       color: white;
       margin-top: 25px;
@@ -138,7 +200,7 @@ footer {
       }
    }
 
-   .footer__nav__links {
+   .footer-nav-links {
       list-style: none;
       margin: auto;
 
@@ -164,7 +226,6 @@ footer {
       width: 270px;
    }
 
-   /* iconos social media */
    .fa {
       padding: 10px;
       margin: 20px;
@@ -181,32 +242,27 @@ footer {
       }
    }
 
-   /* Twitter */
    .fa-twitter {
-      background: #55ACEE;
+      background: map-get($redes, twitter);
       color: white;
    }
 
-   /* Instagram */
    .fa-instagram {
       background: #f09433;
       background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
       background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
       background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
-
       color: white;
    }
 
-   /* Facebook */
    .fa-facebook {
-      background: #3B5998;
+      background: map-get($redes, facebook);
       color: white;
    }
 
-   /* Vimeo */
    .fa-vimeo {
-      background: #c63434;
+      background: map-get($redes, vimeo);
       color: white;
    }
 }
@@ -218,5 +274,4 @@ footer {
    }
 }
 
-/* fin de iconos social media */
 /* ------------------FOOTER------------------ */

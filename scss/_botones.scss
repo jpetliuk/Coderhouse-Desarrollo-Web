@@ -75,7 +75,7 @@ button {
    will-change: transform;
 
    &:disabled {
-      pointer-events: none;
+      @extend .boton-principal:disabled;
    }
 
    &:hover {
@@ -84,8 +84,7 @@ button {
    }
 
    &:active {
-      box-shadow: none;
-      transform: translateY(0);
+      @extend .boton-principal:active;
    }
 }
 
