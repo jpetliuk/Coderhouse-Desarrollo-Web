@@ -23,6 +23,7 @@ p {
 
 body {
   margin: 0;
+  padding: 0;
   font-size: 1.7rem;
   font-weight: normal; }
 
@@ -35,13 +36,6 @@ body {
 main {
   grid-area: principal; }
 
-.centrado {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -40%); }
-
 @media only screen and (max-width: 767px) {
   .spacing {
     margin-top: 20px; } }
@@ -49,15 +43,18 @@ main {
 /*map & mixin*/
 /*fin map*/
 .titulo-bg {
-  background-position: center;
   background-size: cover;
-  height: 80vh;
-  width: 100%;
+  background-position: center;
+  padding-top: 200px;
+  padding-bottom: 100px;
+  padding-left: 25%;
+  padding-right: 25%;
   text-align: center; }
 
 @media only screen and (max-width: 767px) {
   .titulo-bg {
-    height: 90vh; } }
+    padding-top: 100px;
+    padding-bottom: 50px; } }
 
 .inicio-titulo {
   font-weight: 100;
@@ -73,6 +70,10 @@ main {
   font-weight: normal;
   text-align: center;
   margin-bottom: 100px; }
+
+.tiny-space {
+  margin-bottom: 100px;
+  padding-bottom: 100px; }
 
 /* ------------------HEADER------------------ */
 .nav-link {
@@ -187,9 +188,15 @@ footer {
 @media only screen and (max-width: 767px) {
   footer {
     display: block;
-    text-align: center; } }
+    text-align: center; }
+    footer .footer-nav-links li {
+      padding: 0; } }
 
 /* ------------------FOOTER------------------ */
+/*000webhost*/
+.disclaimer {
+  visibility: hidden !important; }
+
 button {
   font-family: 'lato', sans-serif; }
 
@@ -309,7 +316,7 @@ button {
     #nosotros-index p {
       text-align: center; }
     #nosotros-index button {
-      margin: 0 0 0 36%; } }
+      margin: auto; } }
 
 /* fin de seccion sobre nosotros */
 /* seccion video */
@@ -341,17 +348,19 @@ button {
 /* media */
 #media {
   display: grid;
-  grid-template-columns: repeat(6, 1fr); }
+  grid-template-columns: repeat(6, 1fr);
+  background-color: #26252d; }
   #media img {
     min-width: 100%;
     max-width: 100%;
     height: auto;
     transition: all 0.5s;
     box-sizing: border-box;
+    border-color: #26252d;
     border-style: solid;
     border-width: 1px; }
 
-@media only screen and (min-width: 480px) {
+@media only screen and (max-width: 767px) {
   #media {
     grid-template-columns: repeat(4, 1fr); }
     #media .media-hidden-phone {
@@ -396,7 +405,7 @@ button {
     color: inherit;
     text-decoration: none; }
   .menu__lista div {
-    width: 330px;
+    width: 300px;
     height: 360px;
     border-radius: 8px;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
@@ -409,8 +418,8 @@ button {
       transform: translateY(-15px);
       box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2); }
     .menu__lista div img {
-      width: 330px;
-      height: 220px; }
+      width: 300px;
+      max-height: 220px; }
     .menu__lista div h4 {
       margin: 20px 0 10px 0; }
     .menu__lista div p {
@@ -537,29 +546,61 @@ button {
 #titulo-contacto {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url("../assets/img/pexels-jonas-2787672.jpg"); }
 
-#contacto h2 {
-  font-size: 3rem;
-  margin-bottom: 20px; }
-
-#contacto form {
-  margin-bottom: 40px; }
-  #contacto form div label {
-    font-size: 2rem; }
-  #contacto form div input {
-    font-size: 1.5rem; }
-  #contacto form div textarea {
-    font-size: 1.5rem; }
-  #contacto form div button {
-    font-size: 1.4rem;
-    margin-bottom: 25px;
-    font-weight: bold;
-    color: black;
-    background-color: #e1c04f;
-    border: 2px solid #e1c04f; }
+#contacto {
+  padding: 0 1% 0 1%; }
+  #contacto h2 {
+    font-size: 3rem;
+    margin-bottom: 20px; }
+  #contacto form {
+    margin-bottom: 40px; }
+    #contacto form div label {
+      font-size: 2rem; }
+    #contacto form div input {
+      font-size: 1.5rem; }
+    #contacto form div textarea {
+      font-size: 1.5rem; }
+    #contacto form div button {
+      font-size: 1.4rem;
+      margin-bottom: 25px;
+      font-weight: bold;
+      color: black;
+      background-color: #e1c04f;
+      border: 2px solid #e1c04f; }
 
 /* ------------------FIN DE CONTACTO------------------ */
 /* ------------------SERVICIOS------------------ */
 #titulo-servicios {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url("../assets/img/header-menu.jpg"); }
+
+.evento-img {
+  max-width: 50%;
+  margin: 20px 25% 20px;
+  box-shadow: 0 0 5px 2px #282a2d; }
+
+#servicios {
+  padding: 0 1% 0 1%;
+  text-align: center; }
+
+.servicios-contenedor {
+  margin: 25px auto 10px auto;
+  border-bottom: 1px solid #d2d2d2; }
+
+.servicios-contenido {
+  padding: 25px; }
+  .servicios-contenido p {
+    text-align: left;
+    font-size: 1.5rem;
+    color: #464646; }
+  .servicios-contenido h2 {
+    text-align: left;
+    font-size: 2rem; }
+
+.inline-border {
+  border-right: 1px solid #d2d2d2;
+  border-left: 1px solid #d2d2d2; }
+
+@media only screen and (max-width: 767px) {
+  .servicios-contenido {
+    border: none; } }
 
 /* ------------------FIN DE SERVICIOS------------------ */

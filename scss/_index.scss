@@ -68,7 +68,7 @@
       }
 
       button {
-         margin: 0 0 0 36%;
+         margin: auto;
       }
    }
 }
@@ -114,19 +114,22 @@
 #media {
    display: grid;
    grid-template-columns: repeat(6, 1fr);
+   background-color: rgb(38, 37, 45);
 
    img {
       min-width: 100%;
       max-width: 100%;
+
       height: auto;
       transition: all 0.5s;
       box-sizing: border-box;
+      border-color: rgb(38, 37, 45);
       border-style: solid;
       border-width: 1px;
    }
 }
 
-@media only screen and (min-width: 480px) {
+@media only screen and (max-width: 767px) {
    #media {
       grid-template-columns: repeat(4, 1fr);
 

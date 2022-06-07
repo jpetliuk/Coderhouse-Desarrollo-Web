@@ -4,4 +4,46 @@
    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('../assets/img/header-menu.jpg');
 }
 
+.evento-img {
+   max-width: 50%;
+   margin: 20px 25% 20px;
+   box-shadow: 0 0 5px 2px #282a2d;
+}
+
+#servicios {
+   padding: 0 1% 0 1%;
+   text-align: center;
+}
+
+.servicios-contenedor {
+   margin: 25px auto 10px auto;
+   border-bottom: 1px solid rgb(210, 210, 210);
+}
+
+.servicios-contenido {
+   padding: 25px;
+
+   p {
+      text-align: left;
+      font-size: 1.5rem;
+      color: rgb(70, 70, 70);
+   }
+
+   h2 {
+      text-align: left;
+      font-size: 2rem;
+   }
+}
+
+.inline-border {
+   border-right: 1px solid rgb(210, 210, 210);
+   border-left: 1px solid rgb(210, 210, 210);
+}
+
+@media only screen and (max-width: 767px) {
+   .servicios-contenido {
+      border: none;
+   }
+}
+
 /* ------------------FIN DE SERVICIOS------------------ */

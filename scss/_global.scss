@@ -28,6 +28,7 @@ p {
 
 body {
    margin: 0;
+   padding: 0;
    font-size: 1.7rem;
    font-weight: normal;
 }
@@ -45,14 +46,6 @@ body {
 
 main {
    grid-area: principal;
-}
-
-.centrado {
-   margin: 0;
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -40%);
 }
 
 @media only screen and (max-width: 767px) {
@@ -79,16 +72,19 @@ $redes: (
 /*fin map*/
 
 .titulo-bg {
-   background-position: center;
    background-size: cover;
-   height: 80vh;
-   width: 100%;
+   background-position: center;
+   padding-top: 200px;
+   padding-bottom: 100px;
+   padding-left: 25%;
+   padding-right: 25%;
    text-align: center;
 }
 
 @media only screen and (max-width: 767px) {
    .titulo-bg {
-      height: 90vh;
+      padding-top: 100px;
+      padding-bottom: 50px;
    }
 }
 
@@ -105,6 +101,11 @@ $redes: (
    font-weight: normal;
    text-align: center;
    margin-bottom: 100px;
+}
+
+.tiny-space {
+   margin-bottom: 100px;
+   padding-bottom: 100px;
 }
 
 /* ------------------HEADER------------------ */
@@ -271,7 +272,16 @@ footer {
    footer {
       display: block;
       text-align: center;
+
+      .footer-nav-links li {
+         padding: 0;
+      }
    }
 }
 
 /* ------------------FOOTER------------------ */
+
+/*000webhost*/
+.disclaimer {
+   visibility: hidden !important;
+}
