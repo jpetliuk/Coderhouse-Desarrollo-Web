@@ -460,9 +460,9 @@ button {
   font-family: 'lato', sans-serif;
   font-weight: bold;
   font-size: 1.8rem;
-  margin-left: 10px; }
+  margin-left: 10px;
+  text-decoration: underline; }
   .go-back:hover {
-    text-decoration: underline;
     color: #e1c04f; }
 
 #productos {
@@ -537,6 +537,10 @@ button {
   height: 1px;
   border: 0; }
 
+@media only screen and (max-width: 500px) {
+  #productosInformacion div {
+    width: 90%; } }
+
 @media only screen and (max-width: 1200px) {
   #productosInformacion {
     justify-content: center; } }
@@ -566,6 +570,11 @@ button {
       color: black;
       background-color: #e1c04f;
       border: 2px solid #e1c04f; }
+
+.requerido-simbolo {
+  color: red;
+  font-size: 2rem;
+  font-family: 'Raleway', sans-serif; }
 
 /* ------------------FIN DE CONTACTO------------------ */
 /* ------------------SERVICIOS------------------ */

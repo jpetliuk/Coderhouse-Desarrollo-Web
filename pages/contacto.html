@@ -33,7 +33,7 @@
             <div class="collapse navbar-collapse" id="toggleMobileMenu">
                <ul class="navbar-nav ms-auto text-center">
                   <hr class="hr-header">
-                  <li><a class="nav-link" href="menu.html">Menu</a></li>
+                  <li><a class="nav-link" href="menu.html">Menú</a></li>
                   <li><a class="nav-link" href="servicios.html">Servicios</a></li>
                   <li><a class="nav-link" href="nosotros.html">Nosotros</a></li>
                   <li><a class="nav-link" href="contacto.html">Contacto</a></li>
@@ -47,10 +47,8 @@
          <article id="titulo-contacto" class="titulo-bg">
             <div class="centrado">
                <h1 class="inicio-titulo">CONT<span class="inicio-titulo-color">ACTO</span></h1>
-               <p class="inicio-subtitulo">Disfruta de la mejor experiencia culinaria
-                  de la mano de los mejores Sushimen de Buenos Aires, Cada pieza fusiona diferentes
-                  sabores y texturas que solo podes encontrar en SushiHouse.<br>
-                  Hacé tu reserva online.</p>
+               <p class="inicio-subtitulo">Contactate con nosotros para dejarnos un mensaje, saludos, quejas,
+                  sugerencias, consultas, lo que quieras.</p>
             </div>
          </article>
          <!-- fin de seccion inicio -->
@@ -58,27 +56,29 @@
          <!-- contacto -->
          <div id="contacto" class="container mt-5">
             <h2>Contactate con Nosotros!</h2>
+            <hr class="hr__center">
             <form class="row g-3">
                <div class="col-md-6">
-                  <label for="nombre" class="form-label">Nombre</label>
+                  <label for="nombre" class="form-label"><span class="requerido-simbolo">*</span>Nombre</label>
                   <input type="text" class="form-control" id="nombre" placeholder="Jose" required>
                </div>
                <div class="col-md-6">
-                  <label for="apellido" class="form-label">Apellido</label>
+                  <label for="apellido" class="form-label"><span class="requerido-simbolo">*</span>Apellido</label>
                   <input type="text" class="form-control" id="apellido" placeholder="Hernandez" required>
                </div>
                <div class="col-md-8">
-                  <label for="emailInfo" class="form-label">E-mail</label>
+                  <label for="emailInfo" class="form-label"><span class="requerido-simbolo">*</span>E-mail</label>
                   <input type="email" class="form-control" id="emailInfo" placeholder="ejemplo@gmail.com" required>
                </div>
                <div class="col-md-4">
-                  <label for="telefono" class="form-label">telefono</label>
+                  <label for="telefono" class="form-label">teléfono</label>
                   <input type="text" class="form-control" id="telefono" placeholder="+54 11 1234-5678">
                </div>
                <div class="col-md-12">
-                  <label for="comentario" class="form-label">Comentario</label>
+                  <label for="comentario" class="form-label"><span class="requerido-simbolo">*</span>Comentario</label>
                   <textarea class="form-control" id="comentario" rows="3" required></textarea>
                </div>
+               <label><span class="requerido-simbolo">*</span>Campos requeridos.</label>
                <div class="col-md-12">
                   <button type="submit" class="btn btn-primary">Enviar</button>
                </div>
