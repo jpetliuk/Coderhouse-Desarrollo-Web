@@ -283,5 +283,9 @@ footer {
 
 /*000webhost*/
 .disclaimer {
-   visibility: hidden !important;
+   display: none !important;
+}
+
+.footer {
+   margin: 0 !important;
 }

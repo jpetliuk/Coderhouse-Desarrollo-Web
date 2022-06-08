@@ -10,6 +10,13 @@
    box-shadow: 0 0 5px 2px #282a2d;
 }
 
+@media only screen and (max-width: 767px) {
+   .evento-img {
+      max-width: 70%;
+      margin: 20px 15% 20px;
+   }
+}
+
 #servicios {
    padding: 0 1% 0 1%;
    text-align: center;
