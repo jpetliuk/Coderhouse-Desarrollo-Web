@@ -573,6 +573,10 @@ button {
       background-color: #e1c04f;
       border: 2px solid #e1c04f; }
 
+.requerido {
+  color: #505050;
+  font-size: 1.5rem; }
+
 .requerido-simbolo {
   color: red;
   font-size: 2rem;
