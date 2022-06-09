@@ -41,9 +41,11 @@
          max-height: 80%;
          transition: all 1s cubic-bezier(.23, 1, 0.32, 1);
          margin-top: 20px;
+         box-shadow: 0 0 5px 2px #282a2d;
 
          &:hover {
             transform: scale(1.1, 1.1);
+            box-shadow: 0 0 2px 1px #282a2d;
          }
       }
    }
