@@ -289,3 +289,36 @@ footer {
 .footer {
    margin: 0 !important;
 }
+
+/*arreglos pantalla muy pequeña*/
+@media only screen and (max-width: 400px) {
+   .navbar a img {
+      width: 70vw;
+      max-width: 270px;
+   }
+
+   .navbar-brand {
+      width: 70vw;
+   }
+
+   .titulo-bg {
+      padding-left: 0;
+      padding-right: 0;
+      margin: 0 auto 0 auto;
+   }
+
+   .footer a .logo {
+      width: 70vw;
+      max-width: 270px;
+   }
+
+   .footer-redes hr {
+      width: 70vw;
+   }
+
+   footer {
+      .fa {
+         margin: 20px 5vw 20px 4vw;
+      }
+   }
+}

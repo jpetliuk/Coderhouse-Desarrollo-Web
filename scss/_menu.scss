@@ -41,7 +41,7 @@
       }
 
       img {
-         width: 300px;
+         width: 100%;
          max-height: 220px;
       }
 
@@ -64,3 +64,12 @@
 /* fin de contenedor menu */
 
 /* ------------------FIN DE MENU------------------ */
+/*arreglos pantalla muy pequeña*/
+
+@media only screen and (max-width: 400px) {
+   .menu__lista {
+      div {
+         width: 80vw;
+      }
+   }
+}
